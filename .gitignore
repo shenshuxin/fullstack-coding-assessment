@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+.vite/
+vite.config.ts.timestamp-*.mjs
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Local tooling / secrets
+.workbuddy/
+*.local

@@ -1,0 +1,151 @@
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1a1a1a;
+  background: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Responsive: single column on ~375px, two columns from 768px up (1280px fine) */
+.pdp {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .pdp {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
+}
+
+.pdp-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #e8e8e8;
+}
+
+.pdp-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pdp-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.cart-badge {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.stock {
+  min-height: 1.2em;
+  font-weight: 600;
+}
+
+.option-group {
+  border: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.option-group legend {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.option-chip {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid #999;
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.option-chip.selected {
+  border-color: #0057b8;
+  background: #e6f0fb;
+  font-weight: 600;
+}
+
+.option-chip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* visible focus for keyboard users */
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #0057b8;
+  outline-offset: 2px;
+}
+
+.quantity {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.quantity input {
+  display: block;
+  width: 6rem;
+  margin-top: 0.3rem;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.add-to-cart {
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background: #0057b8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-to-cart:disabled {
+  background: #9ab6d8;
+  cursor: not-allowed;
+}
+
+.feedback {
+  min-height: 1.4em;
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+
+.feedback.success {
+  color: #146c2e;
+}
+
+.feedback.error {
+  color: #b00020;
+}
+
+.state-message {
+  text-align: center;
+  padding: 4rem 1rem;
+}
